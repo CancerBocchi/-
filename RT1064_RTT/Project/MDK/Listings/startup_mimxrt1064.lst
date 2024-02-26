@@ -1799,12 +1799,13 @@ ARM Macro Assembler    Page 28
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M7.fp.dp --depen
 d=.\objects\startup_mimxrt1064.d -o.\objects\startup_mimxrt1064.o -I..\..\Libra
-ries\rttherad_libraries\libcpu\arm\cortex-m7 -IC:\Users\Administrator\AppData\L
-ocal\Arm\Packs\NXP\MIMXRT1064_DFP\13.1.0 --predefine="__MICROLIB SETA 1" --pred
-efine="__UVISION_VERSION SETA 536" --predefine="CPU_MIMXRT1064DVL6A SETA 1" --p
-redefine="__STARTUP_INITIALIZE_NONCACHEDATA SETA 1" --list=.\listings\startup_m
-imxrt1064.lst ..\..\Libraries\nxp_libraries\startup\MDK-ARM\startup_MIMXRT1064.
-s
+ries\rttherad_libraries\libcpu\arm\cortex-m7 -I.\RTE\_nor_sdram_zf_dtcm_v6 -IC:
+\Keil_v5\ARM\PACK\NXP\MIMXRT1064_DFP\17.0.0\devices\MIMXRT1064 -IC:\Keil_v5\ARM
+\CMSIS\Include -IC:\Keil_v5\ARM\PACK\NXP\MIMXRT1064_DFP\17.0.0 --predefine="__M
+ICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 527" --predefine="CPU_MIMXR
+T1064DVL6A SETA 1" --predefine="__STARTUP_INITIALIZE_NONCACHEDATA SETA 1" --lis
+t=.\listings\startup_mimxrt1064.lst ..\..\Libraries\nxp_libraries\startup\MDK-A
+RM\startup_MIMXRT1064.s
 
 
 
