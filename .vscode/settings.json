@@ -1,9 +1,6 @@
 {
     "files.associations": {
-        "mahonyahrs.h": "c",
-        "flash_param.h": "c",
-        "vofa.h": "c",
-        "headfile.h": "c",
-        "motor.h": "c"
+        "headfile.h": "c"
     }
+
 }

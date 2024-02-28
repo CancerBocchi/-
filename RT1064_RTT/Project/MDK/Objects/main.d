@@ -120,10 +120,4 @@
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_W25QXXJV.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_SCC8660_CSI.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_SCC8660.h \
-  ..\..\Libraries\seekfree_peripheral\SEEKFREE_IMU963RA.h \
-  ..\CODE\display.h ..\CODE\timer_pit.h ..\CODE\encoder.h \
-  ..\CODE\buzzer.h ..\CODE\button.h ..\CODE\motor.h ..\CODE\elec.h \
-  ..\CODE\openart_mini.h ..\CODE\smotor.h ..\CODE\location.h \
-  ..\CODE\attitude_solution.h ..\CODE\vofa.h ..\CODE\Vofa_imageformat.h \
-  ..\CODE\motor.h ..\CODE\flash_param.h ..\CODE\imgproc.h \
-  ..\CODE\carmove.h ..\CODE\MahonyAHRS.h ..\CODE\sendmsg.h
+  ..\..\Libraries\seekfree_peripheral\SEEKFREE_IMU963RA.h

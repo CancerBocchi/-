@@ -31,8 +31,8 @@ typedef enum //枚举IIC引脚
     IIC1_SCL_B16,  IIC1_SCL_D4 ,
                        
     IIC2_SDA_C5 ,  IIC2_SDA_D10,
-    IIC2_SCL_C4 ,  IIC2_SCL_D11,
-                       
+    IIC2_SCL_C4 ,  IIC2_SCL_D11,//核心板未引出D10 D11
+
     IIC3_SDA_B22,  IIC3_SDA_D13,    IIC3_SDA_E21,//注意核心板并未引出E21
     IIC3_SCL_B23,  IIC3_SCL_D12,    IIC3_SCL_E22,//注意核心板并未引出E22
                       

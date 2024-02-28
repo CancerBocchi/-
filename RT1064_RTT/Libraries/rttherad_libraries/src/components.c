@@ -140,7 +140,9 @@ extern int $Super$$main(void);
 int $Sub$$main(void)
 {
     rtthread_startup();
-    return 0;
+    
+    $Super$$main();
+		return 0;
 }
 #elif defined(__ICCARM__)
 extern int main(void);

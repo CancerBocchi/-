@@ -458,8 +458,8 @@ void board_init(void)
     BOARD_ConfigMPU();      //初始化内存保护单元
     BOARD_BootClockRUN();   //初始化开发板时钟
     
-//    BOARD_InitBootPins();   //初始化开发板引脚
-//    BOARD_InitDebugConsole();
+    BOARD_InitBootPins();   //初始化开发板引脚
+    BOARD_InitDebugConsole();
     
 #if (1==PRINTF_ENABLE)      //初始化调试串口
     BOARD_InitDebugConsole();
