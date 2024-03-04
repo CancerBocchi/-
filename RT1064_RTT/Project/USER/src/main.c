@@ -37,34 +37,59 @@ void led_pro()
    while(1)
    {
         gpio_toggle(B9);
-        rt_thread_delay(500);
-
-        gpio_toggle(B9);
-        rt_thread_delay(500);
-
+        rt_thread_delay(1000);
         rt_kprintf("led:toggle pin B9!\n");
    }
 }
 
+void print_entry()
+{
+	int i;
+    while(1)
+    {
+        rt_kprintf("print:this thread is running!\n");
+        rt_thread_delay(1000);
+    }
+}
+
 rt_thread_t led_thread;
+rt_thread_t print_thread;
 
 int main()
 {
-    gpio_init(B9,GPO,0,GPIO_PIN_CONFIG);
-    led_thread = rt_thread_create("led",led_pro,RT_NULL,1024,20,25);
+    // gpio_init(B9,GPO,0,GPIO_PIN_CONFIG);
+    // led_thread = rt_thread_create("led",led_pro,RT_NULL,1024,20,25);
 
-    if(led_thread != RT_NULL){
-        rt_thread_startup(led_thread);
-        // rt_kprintf("led:thread created successful!\n");
-    }
-    else{
-        rt_kprintf("led:thread create failed!\n");
-    }
+    // print_thread = rt_thread_create("print",print_entry,RT_NULL,512,10,25);
 
-    // while(1)
-    // {
-
+    // if(led_thread != RT_NULL){
+    //     rt_thread_startup(led_thread);
+    //     // rt_kprintf("led:thread created successful!\n");
     // }
+    // else{
+    //     rt_kprintf("led:thread creation failed!\n");
+    // }
+
+    // if(print_thread != RT_NULL){
+    //     rt_thread_startup(print_thread);
+    // }
+    // else{
+    //     rt_kprintf("print_thread creation failed");
+    // }
+	
+    pit_init();
+    pit_interrupt(PIT_CH0,2000);
+    pit_start(PIT_CH0);
+    int tick;
+	while(1)
+	{
+		
+        //tick = pit_get(PIT_CH0);
+        rt_kprintf("tick:%d\n",PIT_SOURCE_CLOCK);
+
+	}
+	
+	return 0;
 
 }
 
@@ -140,7 +165,7 @@ int main()
 //     //elec_init();
 
 //     ips114_showstr(0,7,"smotor-init...");
-//     smotor_init();
+//    smotor_init();
 //     ips114_showstr(150,7,"ok");
 //		
 //     ips114_showstr(0,8,"timer_pit...");

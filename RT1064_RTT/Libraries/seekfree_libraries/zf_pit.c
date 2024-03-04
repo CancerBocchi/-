@@ -83,7 +83,7 @@ void pit_delay(PIT_enum pit_ch, uint32 count)
 //-------------------------------------------------------------------------------------------------------------------
 void pit_start(PIT_enum pit_ch)
 {
-    PIT_SetTimerPeriod(PIT, (pit_chnl_t)pit_ch, 0xFFFFFFFF);
+    PIT_SetTimerPeriod(PIT, (pit_chnl_t)pit_ch, 0xFFFFFF);
 	PIT_SetTimerChainMode(PIT, (pit_chnl_t)pit_ch,false);
     PIT_StartTimer(PIT, (pit_chnl_t)pit_ch);
     

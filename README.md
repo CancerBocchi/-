@@ -25,16 +25,16 @@
 
   | Definition. | Pin. |
   | :---------: | :--: |
-  |   CSI_D15   | C20  |
-  |   CSI_D14   | C21  |
-  |   CSI_D13   | C22  |
-  |   CSI_D12   | C23  |
-  |   CSI_D11   | C24  |
-  |   CSI_D10   | C25  |
-  |   CSI_D0    | C26  |
-  |   CSI_D1    | C27  |
-  | CSI_PIXCLK  | C28  |
-  |  CSI_VSYNC  | C29  |
+  |   CSI_D9    | B24  |
+  |   CSI_D8    | B25  |
+  |   CSI_D7    | B26  |
+  |   CSI_D6    | B27  |
+  |   CSI_D5    | B28  |
+  |   CSI_D4    | B29  |
+  |   CSI_D3    | B30  |
+  |   CSI_D2    | B31  |
+  | CSI_PIXCLK  | B20  |
+  |  CSI_VSYNC  | B22  |
 
 - I2C：I2C1，3可用
 
@@ -47,13 +47,13 @@
 
   |            |  SPI3  | SPI4 |
   | :--------: | :----: | :--: |
-  |    CS0     |  B28   |  B0  |
-  |    CS1     | B4(no) | B19  |
-  |    CS2     | B5(no) | B18  |
-  |    CS3     | B6(no) | B27  |
-  |    SCK     |  B31   |  B3  |
-  | SOUT(MOSI) |  B30   |  B2  |
-  | SIN(MISO)  |  B29   |  B1  |
+  |    CS0     |  B28   | C18  |
+  |    CS1     | B4(no) | C19  |
+  |    CS2     | B5(no) | C20  |
+  |    CS3     | B6(no) | C27  |
+  |    SCK     |  B31   | C23  |
+  | SOUT(MOSI) |  B30   | C22  |
+  | SIN(MISO)  |  B29   | C21  |
 
 
 ​	这里使用SPI3作为与屏幕通信的接口

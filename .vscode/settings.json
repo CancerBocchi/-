@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "headfile.h": "c"
-    }
+    },
+    "commentTranslate.source": "Bing"
 
 }
