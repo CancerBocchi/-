@@ -28,9 +28,10 @@
 //下载代码前请根据自己使用的下载器在工程里设置下载器为自己所使用的
 
 #include "headfile.h"
+#include "isr.h"
+#include "Attitude_algorithm.h"
 
-
-void led_pro()
+void led_entry()
 {
    int tick = rt_tick_get();
 
@@ -38,7 +39,7 @@ void led_pro()
    {
         gpio_toggle(B9);
         rt_thread_delay(1000);
-        rt_kprintf("led:toggle pin B9!\n");
+        //rt_kprintf("led:toggle pin B9!\n");
    }
 }
 
@@ -47,47 +48,77 @@ void print_entry()
 	int i;
     while(1)
     {
-        rt_kprintf("print:this thread is running!\n");
+        //rt_kprintf("print:this thread is running!\n");
         rt_thread_delay(1000);
+    }
+}
+
+void Attitude_algorithm_entry()
+{
+    rt_kprintf("attitude_algorithm thread created successfully!\n");
+    while(1)
+    {
+        Cancer_Kalman_Algo(&Kal);
+        
+        rt_kprintf("%.3f,%.3f,%.3f\n",Att.pitch,Att.roll,Att.yaw);
+        // rt_kprintf("%.3f,%.3f,%.3f\n",0.1,0.1,0.1);
+        rt_thread_delay(1);
     }
 }
 
 rt_thread_t led_thread;
 rt_thread_t print_thread;
+rt_thread_t Attitude_algorithm_thread;
 
 int main()
 {
-    // gpio_init(B9,GPO,0,GPIO_PIN_CONFIG);
-    // led_thread = rt_thread_create("led",led_pro,RT_NULL,1024,20,25);
+	icm20602_init_spi();
+    Cancer_KalmanInit(&Kal);
 
-    // print_thread = rt_thread_create("print",print_entry,RT_NULL,512,10,25);
+    gpio_init(B9,GPO,0,GPIO_PIN_CONFIG);
+    led_thread = rt_thread_create("led",led_entry,RT_NULL,1024,20,5);
 
-    // if(led_thread != RT_NULL){
-    //     rt_thread_startup(led_thread);
-    //     // rt_kprintf("led:thread created successful!\n");
-    // }
-    // else{
-    //     rt_kprintf("led:thread creation failed!\n");
-    // }
+    print_thread = rt_thread_create("print",print_entry,RT_NULL,512,20,5);
 
-    // if(print_thread != RT_NULL){
-    //     rt_thread_startup(print_thread);
-    // }
-    // else{
-    //     rt_kprintf("print_thread creation failed");
-    // }
+    Attitude_algorithm_thread = rt_thread_create("Attitude_algorithm",Attitude_algorithm_entry,RT_NULL,512,10,20);
+
+    if(led_thread != RT_NULL){
+        rt_thread_startup(led_thread);
+        // rt_kprintf("led:thread created successful!\n");
+    }
+    else{
+        rt_kprintf("led:thread creation failed!\n");
+    }
+
+    if(print_thread != RT_NULL){
+        rt_thread_startup(print_thread);
+    }
+    else{
+        rt_kprintf("print_thread creation failed\n");
+    }
+
+    if(Attitude_algorithm_thread != RT_NULL)
+    {
+        rt_thread_startup(Attitude_algorithm_thread);
+    }
+    else{
+        rt_kprintf("Attitude_algorithm_thread creation failed\n");
+    }
 	
-    pit_init();
-    pit_interrupt(PIT_CH0,2000);
-    pit_start(PIT_CH0);
-    int tick;
-	while(1)
-	{
-		
-        //tick = pit_get(PIT_CH0);
-        rt_kprintf("tick:%d\n",PIT_SOURCE_CLOCK);
+    // pit_init();
+    // pit_interrupt(PIT_CH0,75000);
 
-	}
+
+
+	// while(1)
+	// {
+    //     if(flag)
+    //     {
+    //         get_icm20602_accdata_spi();
+    //         rt_kprintf("%d\n",icm_acc_z);
+    //         flag = 0;
+    //     }
+	// }
 	
 	return 0;
 
@@ -135,8 +166,8 @@ int main()
 //     ips114_showstr(0,1,"imu963ra-init...");
 // //    imu963ra_init();
 // //    imu_offset_init();
-//     icm20602_init_spi();
-//     gyroOffset_init();
+    // icm20602_init_spi();
+    // gyroOffset_init();
 //     ips114_showstr(150,1,"ok");
 //	
 //     ips114_showstr(0,2,"encoder-init...");
@@ -162,10 +193,10 @@ int main()
 //     flash_param_load();
 //     ips114_showstr(150,6,"ok");
 //    
-//     //elec_init();
+//      elec_init();
 
 //     ips114_showstr(0,7,"smotor-init...");
-//    smotor_init();
+//     smotor_init();
 //     ips114_showstr(150,7,"ok");
 //		
 //     ips114_showstr(0,8,"timer_pit...");

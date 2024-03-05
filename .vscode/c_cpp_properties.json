@@ -43,7 +43,8 @@
                 "RT1064_RTT/Libraries/rttherad_libraries/include/libc",
                 "RT1064_RTT/Libraries/rttherad_libraries/libcpu/arm/cortex-m7",
                 "RT1064_RTT/Project/USER/inc",
-                "RT1064_RTT/Project/CODE"
+                "RT1064_RTT/Project/CODE",
+                "RT1064_RTT/Project/CODE/inc"
             ],
             "defines": [
                 "_DEBUG",

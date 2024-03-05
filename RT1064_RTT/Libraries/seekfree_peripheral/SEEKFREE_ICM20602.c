@@ -335,7 +335,7 @@ void icm20602_init_spi(void)
 
     systick_delay_ms(10);  //上电延时
     
-    (void)spi_init(SPI_NUM, SPI_SCK_PIN, SPI_MOSI_PIN, SPI_MISO_PIN, SPI_CS_PIN, 3, 10*1000*1000);//硬件SPI初始化
+    (void)spi_init(SPI_NUM, SPI_SCK_PIN, SPI_MOSI_PIN, SPI_MISO_PIN, SPI_CS_PIN, 3, 20*1000*1000);//硬件SPI初始化
 
     icm20602_self3_check();//检测
     

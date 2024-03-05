@@ -62,10 +62,10 @@
 
   CSI预留一个串口位置，LPUART4
 
-  |      | debug            | openart1          |       CSI       |
-  | ---- | ---------------- | ----------------- | :-------------: |
-  | Per. | LPUART1          | LPUART8           |     LPUART4     |
-  | Pin. | B12(TX)  B13(RX) | D17(RX)   D16(TX) | C16(TX) C17(RX) |
+  |      | debug            | openart1          |       CSI       |   data_output   |
+  | ---- | ---------------- | ----------------- | :-------------: | :-------------: |
+  | Per. | LPUART1          | LPUART8           |     LPUART4     |     LPUART2     |
+  | Pin. | B12(TX)  B13(RX) | D17(RX)   D16(TX) | C16(TX) C17(RX) | B18(TX) B19(RX) |
 
 - 电机控制接口：
 

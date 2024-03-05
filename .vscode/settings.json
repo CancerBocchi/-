@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "headfile.h": "c"
+        "headfile.h": "c",
+        "attitude_solution.h": "c",
+        "attitude_algorithm.h": "c"
     },
     "commentTranslate.source": "Bing"
 
