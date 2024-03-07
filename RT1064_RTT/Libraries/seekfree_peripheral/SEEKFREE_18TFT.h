@@ -44,10 +44,10 @@
 
 //-----------------引脚定义------------------------------
 #define TFT_SPIN    SPI_3           //定义使用的SPI号
-#define TFT_SCL     SPI3_SCK_B0    //定义SPI_SCK引脚
-#define TFT_SDA     SPI3_MOSI_B1   //定义SPI_MOSI引脚
-#define TFT_SDA_IN  SPI3_MISO_B2   //定义SPI_MISO引脚  IPS没有MISO引脚，但是这里任然需要定义，在spi的初始化时需要使用
-#define TFT_CS      SPI3_CS0_B3    //定义SPI_CS引脚
+#define TFT_SCL     SPI3_SCK_B31    //定义SPI_SCK引脚
+#define TFT_SDA     SPI3_MOSI_B30   //定义SPI_MOSI引脚
+#define TFT_SDA_IN  SPI3_MISO_B29   //定义SPI_MISO引脚  IPS没有MISO引脚，但是这里任然需要定义，在spi的初始化时需要使用
+#define TFT_CS      SPI3_CS0_B28    //定义SPI_CS引脚
                     
 #define BL_PIN		C18	            //液晶背光引脚定义  
 #define REST_PIN	B2              //液晶复位引脚定义 由于实际通讯未使用D15因此 这里复用为GPIO

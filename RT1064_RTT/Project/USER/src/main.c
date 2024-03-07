@@ -33,14 +33,16 @@
 
 void led_entry()
 {
-   int tick = rt_tick_get();
+    int tick = rt_tick_get();
 
-   while(1)
-   {
-        gpio_toggle(B9);
-        rt_thread_delay(1000);
-        //rt_kprintf("led:toggle pin B9!\n");
-   }
+    while(1)
+    {
+            lcd_showstr(5,5,"YSJ");
+            lcd_clear(WHITE);       
+            //rt_thread_delay(1);
+
+            //rt_kprintf("led:toggle pin B9!\n");
+    }
 }
 
 void print_entry()
@@ -60,8 +62,8 @@ void Attitude_algorithm_entry()
     {
         Cancer_Kalman_Algo(&Kal);
         
-        rt_kprintf("%.3f,%.3f,%.3f\n",Att.pitch,Att.roll,Att.yaw);
-        // rt_kprintf("%.3f,%.3f,%.3f\n",0.1,0.1,0.1);
+        rt_kprintf("%.3f,%.3f,%.3f,%.3f\n",Att.pitch,Att.roll,Att.yaw,raw_imu_data.gyr_data[2]);
+        // rt_kprintf("%.3f,%.3f,%.3f,,%,3f\n",0.1,0.1,0.1);
         rt_thread_delay(1);
     }
 }
@@ -74,6 +76,7 @@ int main()
 {
 	icm20602_init_spi();
     Cancer_KalmanInit(&Kal);
+    lcd_init();
 
     gpio_init(B9,GPO,0,GPIO_PIN_CONFIG);
     led_thread = rt_thread_create("led",led_entry,RT_NULL,1024,20,5);

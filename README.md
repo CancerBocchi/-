@@ -47,16 +47,16 @@
 
   |            |  SPI3  | SPI4 |
   | :--------: | :----: | :--: |
-  |    CS0     |  B28   | C18  |
+  |    CS0     |   B0   | C18  |
   |    CS1     | B4(no) | C19  |
   |    CS2     | B5(no) | C20  |
   |    CS3     | B6(no) | C27  |
-  |    SCK     |  B31   | C23  |
-  | SOUT(MOSI) |  B30   | C22  |
-  | SIN(MISO)  |  B29   | C21  |
+  |    SCK     |   B3   | C23  |
+  | SOUT(MOSI) |   B2   | C22  |
+  | SIN(MISO)  |   B1   | C21  |
 
 
-​	这里使用SPI3作为与屏幕通信的接口
+​	这里使用SPI3作为与屏幕通信的接口 屏幕其他接口：C24 C25 C26
 
 - UART：
 
@@ -64,8 +64,8 @@
 
   |      | debug            | openart1          |       CSI       |   data_output   |
   | ---- | ---------------- | ----------------- | :-------------: | :-------------: |
-  | Per. | LPUART1          | LPUART8           |     LPUART4     |     LPUART2     |
-  | Pin. | B12(TX)  B13(RX) | D17(RX)   D16(TX) | C16(TX) C17(RX) | B18(TX) B19(RX) |
+  | Per. | LPUART1          | LPUART5           |     LPUART4     |     LPUART2     |
+  | Pin. | B12(TX)  B13(RX) | C28(RX)   C29(TX) | C16(TX) C17(RX) | B18(TX) B19(RX) |
 
 - 电机控制接口：
 
@@ -80,4 +80,4 @@
   | 电机7 |    -     |  -   |
   | 电机8 |    -     |  -   |
 
-- 
+- 电磁铁 C30 C31 C27 C12 C13 C15 C16

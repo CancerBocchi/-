@@ -2,7 +2,11 @@
     "files.associations": {
         "headfile.h": "c",
         "attitude_solution.h": "c",
-        "attitude_algorithm.h": "c"
+        "attitude_algorithm.h": "c",
+        "zf_spi.h": "c",
+        "zf_iomuxc.h": "c",
+        "seekfree_18tft.h": "c",
+        "seekfree_printf.h": "c"
     },
     "commentTranslate.source": "Bing"
 
