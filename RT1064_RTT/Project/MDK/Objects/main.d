@@ -121,4 +121,11 @@
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_SCC8660_CSI.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_SCC8660.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_IMU963RA.h \
-  ..\USER\inc\isr.h ..\CODE\inc\Attitude_algorithm.h
+  ..\USER\inc\isr.h ..\CODE\inc\Attitude_algorithm.h \
+  ..\CODE\inc\debug_tool.h \
+  ..\..\Libraries\rttherad_libraries\components\finsh\finsh.h \
+  ..\..\Libraries\rttherad_libraries\components\finsh\finsh_api.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\ctype.h \
+  ..\..\Libraries\rttherad_libraries\components\finsh\shell.h \
+  ..\..\Libraries\rttherad_libraries\components\finsh\finsh.h

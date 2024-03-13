@@ -1,16 +1,16 @@
 /*********************************************************************************************************************
  * COPYRIGHT NOTICE
- * Copyright (c) 2019,Öð·É¿Æ¼¼
+ * Copyright (c) 2019,ï¿½ï¿½É¿Æ¼ï¿½
  * All rights reserved.
- * ¼¼ÊõÌÖÂÛQQÈº£ºÒ»Èº£º179029047(ÒÑÂú)  ¶þÈº£º244861897
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½QQÈºï¿½ï¿½Ò»Èºï¿½ï¿½179029047(ï¿½ï¿½ï¿½ï¿½)  ï¿½ï¿½Èºï¿½ï¿½244861897
  *
- * ÒÔÏÂËùÓÐÄÚÈÝ°æÈ¨¾ùÊôÖð·É¿Æ¼¼ËùÓÐ£¬Î´¾­ÔÊÐí²»µÃÓÃÓÚÉÌÒµÓÃÍ¾£¬
- * »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌÐò£¬ÐÞ¸ÄÄÚÈÝÊ±±ØÐë±£ÁôÖð·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷¡£
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý°ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½ï¿½Ð£ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Í¾ï¿½ï¿½
+ * ï¿½ï¿½Ó­ï¿½ï¿½Î»Ê¹ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ë±£ï¿½ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½Ä°ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *
  * @file       		main
- * @company	   		³É¶¼Öð·É¿Æ¼¼ÓÐÏÞ¹«Ë¾
- * @author     		Öð·É¿Æ¼¼(QQ3184284598)
- * @version    		²é¿´docÄÚversionÎÄ¼þ °æ±¾ËµÃ÷
+ * @company	   		ï¿½É¶ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½ï¿½Þ¹ï¿½Ë¾
+ * @author     		ï¿½ï¿½É¿Æ¼ï¿½(QQ3184284598)
+ * @version    		ï¿½é¿´docï¿½ï¿½versionï¿½Ä¼ï¿½ ï¿½æ±¾Ëµï¿½ï¿½
  * @Software 		IAR 8.3 or MDK 5.28
  * @Target core		NXP RT1064DVL6A
  * @Taobao   		https://seekfree.taobao.com/
@@ -18,18 +18,19 @@
  ********************************************************************************************************************/
 
 
-//ÕûÌ×ÍÆ¼öIO²é¿´ProjecctÎÄ¼þ¼ÐÏÂµÄTXTÎÄ±¾
+//ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½IOï¿½é¿´Projecctï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Âµï¿½TXTï¿½Ä±ï¿½
 
 
-//´ò¿ªÐÂµÄ¹¤³Ì»òÕß¹¤³ÌÒÆ¶¯ÁËÎ»ÖÃÎñ±ØÖ´ÐÐÒÔÏÂ²Ù×÷
-//µÚÒ»²½ ¹Ø±ÕÉÏÃæËùÓÐ´ò¿ªµÄÎÄ¼þ
-//µÚ¶þ²½ project  clean  µÈ´ýÏÂ·½½ø¶ÈÌõ×ßÍê
+//ï¿½ï¿½ï¿½ÂµÄ¹ï¿½ï¿½Ì»ï¿½ï¿½ß¹ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½
+//ï¿½ï¿½Ò»ï¿½ï¿½ ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ò¿ªµï¿½ï¿½Ä¼ï¿½
+//ï¿½Ú¶ï¿½ï¿½ï¿½ project  clean  ï¿½È´ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-//ÏÂÔØ´úÂëÇ°Çë¸ù¾Ý×Ô¼ºÊ¹ÓÃµÄÏÂÔØÆ÷ÔÚ¹¤³ÌÀïÉèÖÃÏÂÔØÆ÷Îª×Ô¼ºËùÊ¹ÓÃµÄ
+//ï¿½ï¿½ï¿½Ø´ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ô¼ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½
 
 #include "headfile.h"
 #include "isr.h"
 #include "Attitude_algorithm.h"
+#include "debug_tool.h"
 
 void led_entry()
 {
@@ -62,7 +63,7 @@ void Attitude_algorithm_entry()
     {
         Cancer_Kalman_Algo(&Kal);
         
-        rt_kprintf("%.3f,%.3f,%.3f,%.3f\n",Att.pitch,Att.roll,Att.yaw,raw_imu_data.gyr_data[2]);
+        //rt_kprintf("%.3f,%.3f,%.3f,%.3f\n",Att.pitch,Att.roll,Att.yaw,raw_imu_data.gyr_data[2]);
         // rt_kprintf("%.3f,%.3f,%.3f,,%,3f\n",0.1,0.1,0.1);
         rt_thread_delay(1);
     }
@@ -77,13 +78,14 @@ int main()
 	icm20602_init_spi();
     Cancer_KalmanInit(&Kal);
     lcd_init();
+    debug_tool_init();
 
     gpio_init(B9,GPO,0,GPIO_PIN_CONFIG);
     led_thread = rt_thread_create("led",led_entry,RT_NULL,1024,20,5);
 
     print_thread = rt_thread_create("print",print_entry,RT_NULL,512,20,5);
 
-    Attitude_algorithm_thread = rt_thread_create("Attitude_algorithm",Attitude_algorithm_entry,RT_NULL,512,10,20);
+    Attitude_algorithm_thread = rt_thread_create("Attitude_algorithm",Attitude_algorithm_entry,RT_NULL,4096,10,20);
 
     if(led_thread != RT_NULL){
         rt_thread_startup(led_thread);
@@ -191,7 +193,7 @@ int main()
 
 //     ips114_showstr(0,6,"flash-init...");
 //     flash_param_init();
-//     //µÚÒ»´ÎÉÕÐ´flash²ÎÊýÊ±ÐèÒª½«ÏÂÃæÁ½¾ä»°·´¹ýÀ´ÓÃ£¬²¢½«debugÀïÃæµÄ
+//     //ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð´flashï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½debugï¿½ï¿½ï¿½ï¿½ï¿½
 //     //flash_param_write();
 //     flash_param_load();
 //     ips114_showstr(150,6,"ok");
@@ -209,11 +211,11 @@ int main()
 //     //location_thres_init();
 
 //     ips114_showstr(0,9,"uart-init...");
-//     uart_init (USART_8, 115200,UART8_TX_D16,UART8_RX_D17); //³õÊ¼»¯´®¿Ú
+//     uart_init (USART_8, 115200,UART8_TX_D16,UART8_RX_D17); //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //     // VOFA+
-// //    VOFA* VOFA_pt = vofa_create();       //´´½¨VOFA¶ÔÏó
+// //    VOFA* VOFA_pt = vofa_create();       //ï¿½ï¿½ï¿½ï¿½VOFAï¿½ï¿½ï¿½ï¿½
 // //    vofa_init(VOFA_pt
-// //		,                   //³õÊ¼»¯µ±Ç°µÄvofa¶ÔÏó
+// //		,                   //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½vofaï¿½ï¿½ï¿½ï¿½
 // //              vofa_ch_data,ch_sz,
 // //              vofa_image,image_sz,
 // //              custom_buf,custom_sz,
@@ -236,7 +238,7 @@ int main()
 //     Gui_Page_Active=true;
 //     Page_Number=TargetPointPage;
 //     reset_mileage();
-// //    while(1){//²âÊÔ±àÂëÆ÷»ý·ÖÖµ
+// //    while(1){//ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 // //        carmove_mileage(500,0);
 // //        rt_thread_delay(10000);
 // //        carmove_mileage(-500,0);
@@ -262,29 +264,29 @@ int main()
 //     while (1)
 //     {
 
-// 			//µÈ´ýÉãÏñÍ·²É¼¯Íê±Ï
+// 			//ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½É¼ï¿½ï¿½ï¿½ï¿½
 //         //rt_thread_mdelay(10);
-//         //¿ªÊ¼´¦ÀíÉãÏñÍ·Í¼Ïñ
+//         //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·Í¼ï¿½ï¿½
 
 //         //img_raw.data = mt9v03x_csi_image[0];
-//         //adaptive_threshold(&img_raw, &img_thres, block_size, clip_value, 0, 255);//×Ô¶¯ãÐÖµ¶þÖµ»¯
+//         //adaptive_threshold(&img_raw, &img_thres, block_size, clip_value, 0, 255);//ï¿½Ô¶ï¿½ï¿½ï¿½Öµï¿½ï¿½Öµï¿½ï¿½
 //         //Find_Edge_1();
 
 
-//         if(Car.Position_Pointer<locate_sz){//locate_sz => true_sz¸Ä
+//         if(Car.Position_Pointer<locate_sz){//locate_sz => true_szï¿½ï¿½
 //             //car_noheadmove();
-//             car_omnimove();//Ð¡³µ³µÍ·ÓÀÔ¶ÏòÇ°µÄÔË¶¯·½Ê½
+//             car_omnimove();//Ð¡ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ô¶ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½Ê½
 //         }else if(Car.Position_Pointer>=locate_sz){
 //             car_return();
 //         }
 
 
 
-//         rt_thread_delay(1);//²»Áô¿ÕµÄ»°£¬ÆäËûÏß³ÌÔËÐÐ²»ÁË
+//         rt_thread_delay(1);//ï¿½ï¿½ï¿½ï¿½ï¿½ÕµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½
 //         //vofa_Send();
 //         //rt_mb_send(buzzer_mailbox,23);
 
-//         //Í¼Æ¬Î»ÖÃ¾ÀÕý²âÊÔ
+//         //Í¼Æ¬Î»ï¿½Ã¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 // //        openartMode=get_picture;
 // //        Car.Speed_X=picture_xerror_pid(picture_location[0],154);
 // //        Car.Speed_Y=picture_yerror_pid(picture_location[1],156);
@@ -294,4 +296,4 @@ int main()
 
 //  
 
- //Ð´Ò»¸öÈë¿ÚÊÇÎ»ÒÆµÄÒÆ¶¯º¯Êý£¬¿ØÖÆºÃÏñÄÜºÃºÜ¶à£¿Òª²»È»Îó²î±È½Ï´ó
+ //Ð´Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Æµï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æºï¿½ï¿½ï¿½ï¿½ÜºÃºÜ¶à£¿Òªï¿½ï¿½È»ï¿½ï¿½ï¿½È½Ï´ï¿½

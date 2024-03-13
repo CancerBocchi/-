@@ -1,7 +1,7 @@
 #include "Attitude_algorithm.h"
 #include "SEEKFREE_ICM20602.h"
 
-/*********鍙橀噺瀹氫�??*********/
+/*********鍙橀噺瀹氫�??*********/
 State Att;//鏈€缁堢殑瑙掑害
 State Att_A;//閫氳繃鍔犻€熷害娴嬬畻鐨勮搴�
 State Att_G;//閫氳繃瑙掗€熷害娴嬬畻鐨勮搴�
@@ -10,19 +10,22 @@ float D_Gyro[3][3]={0};//瑙掗€熷害鏃嬭浆鐭╅樀
 
 float ICS_Gyro_x;
 float ICS_Gyro_y;
-float ICS_Gyro_z;//鎯€у弬鑰冪郴涓嬬殑瑙掗€熷�??
+float ICS_Gyro_z;//鎯€у弬鑰冪郴涓嬬殑瑙掗€熷�??
 
 int previous_t;//鍗曚綅寰
 int current_t;//鍗曚綅寰
-float dt;//鍗曚綅绉�??
+float dt;//鍗曚綅绉�??
 
-//鍗″皵鏇兼护娉�??
+//鍗″皵鏇兼护娉�??
 raw_data raw_imu_data;
 
 KalmanInfo Kal;
 
 void imu_data_convertion(int16 acc_x,int16 acc_y,int16 acc_z,int16 gyro_x,int16 gyro_y,int16 gyro_z)
 {
+	static float fliter_value[2];
+	float a = 0.2f;
+
 	get_icm20602_accdata_spi();
 	get_icm20602_gyro_spi();
 
@@ -33,6 +36,11 @@ void imu_data_convertion(int16 acc_x,int16 acc_y,int16 acc_z,int16 gyro_x,int16 
 	raw_imu_data.gyr_data[0] = (float)gyro_x*gyro_range/resolution*angle_to_rad;
 	raw_imu_data.gyr_data[1] = (float)gyro_y*gyro_range/resolution*angle_to_rad;
 	raw_imu_data.gyr_data[2] = (float)gyro_z*gyro_range/resolution*angle_to_rad;
+
+	fliter_value[1] = (float)((1.0f - a) * (float)fliter_value[0] + a*raw_imu_data.gyr_data[2]);
+	fliter_value[0] = fliter_value[1];
+
+	raw_imu_data.gyr_data[2] = fliter_value[1];
 }
 
 /*********鍑芥暟缂栧啓*********/
@@ -54,7 +62,7 @@ void Cancer_GetDGyro(float D[3][3])
 
 
 /*
-*娴嬮噺鍏紡锛�?? 
+*娴嬮噺鍏紡锛�?? 
 *roll=arctan(ay/az)  pitch=-arctan(ax/sqrt(ay^2+az^2))
 *鏍规嵁鍔犻€熷害璁″緱鍒拌娴嬮噺
 */
@@ -72,7 +80,7 @@ void Cancer_GetState_Accel(State*att)
 
 
 /*
-*鍗″皵鏇兼护娉�??
+*鍗″皵鏇兼护娉�??
 */
 
 void Cancer_KalmanInit(KalmanInfo* Kal)
@@ -88,7 +96,7 @@ void Cancer_KalmanInit(KalmanInfo* Kal)
 void Cancer_Kalman_Algo(KalmanInfo* Kal)
 {
 	
-	/******鐘舵€佷及璁�??******/
+	/******鐘舵€佷及璁�??******/
 	imu_data_convertion(icm_acc_x,icm_acc_y,icm_acc_z,icm_gyro_x,icm_gyro_y,icm_gyro_z);
 	current_t=imu_get_tick;	//鑾峰彇鏃堕棿
 	dt=(float)(current_t-previous_t)/1000;
@@ -104,7 +112,7 @@ void Cancer_Kalman_Algo(KalmanInfo* Kal)
 	/******鏂瑰樊浼拌******/
 	Kal->P+=Kal->Qk;
 	
-	/******Ka浼拌�??******/
+	/******Ka浼拌�??******/
 	Kal->Ka=Kal->P/((Kal->P)+(Kal->Rk));
 	
 	/******淇缁撴灉******/

@@ -1,6 +1,4 @@
-./objects/components.o: \
-  ..\..\Libraries\rttherad_libraries\src\components.c \
-  ..\..\Libraries\rttherad_libraries\include\rthw.h \
+./objects/debug_tool.o: ..\CODE\src\debug_tool.c ..\CODE\inc\debug_tool.h \
   ..\..\Libraries\rttherad_libraries\include\rtthread.h \
   ..\..\Libraries\rttherad_libraries\bsp\rtconfig.h \
   ..\..\Libraries\rttherad_libraries\include\rtdebug.h \
