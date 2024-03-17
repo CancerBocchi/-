@@ -140,7 +140,7 @@ extern int $Super$$main(void);
 int $Sub$$main(void)
 {
     rtthread_startup();
-    
+	
     $Super$$main();
 		return 0;
 }

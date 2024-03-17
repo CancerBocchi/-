@@ -33,7 +33,7 @@ void CSI_IRQHandler(void)
 
 void PIT_IRQHandler(void)
 {
-    rt_interrupt_enter();
+    //rt_interrupt_enter();
     if(PIT_FLAG_GET(PIT_CH0))
     {
         PIT_FLAG_CLEAR(PIT_CH0);
@@ -43,6 +43,10 @@ void PIT_IRQHandler(void)
     if(PIT_FLAG_GET(PIT_CH1))
     {
         PIT_FLAG_CLEAR(PIT_CH1);
+				encoder_getvalue();
+				Motor_Pwm_cb();
+				gpio_toggle(B9);
+				
     }
     
     if(PIT_FLAG_GET(PIT_CH2))
@@ -55,8 +59,8 @@ void PIT_IRQHandler(void)
         PIT_FLAG_CLEAR(PIT_CH3);
     }
 
-    __DSB();
-    rt_interrupt_leave();
+    // __DSB();
+    //rt_interrupt_leave();
 }
 
 

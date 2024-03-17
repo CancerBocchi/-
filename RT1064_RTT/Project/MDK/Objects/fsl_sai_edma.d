@@ -3,19 +3,19 @@
   ..\..\Libraries\nxp_libraries\drives\fsl_sai_edma.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_edma.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_common.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\assert.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  F:\_IDE\Keil\ARM\ARMCLANG\Bin\..\include\assert.h \
+  F:\_IDE\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  F:\_IDE\Keil\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  F:\_IDE\Keil\ARM\ARMCLANG\Bin\..\include\string.h \
+  F:\_IDE\Keil\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ..\..\Libraries\nxp_libraries\deceive\fsl_device_registers.h \
   ..\..\Libraries\nxp_libraries\deceive\MIMXRT1064.h \
   ..\..\Libraries\nxp_libraries\CMSIS\Include\core_cm7.h \
   ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_version.h \
   ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_compiler.h \
   ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_armclang.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  F:\_IDE\Keil\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  F:\_IDE\Keil\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\..\Libraries\nxp_libraries\CMSIS\Include\mpu_armv7.h \
   ..\..\Libraries\nxp_libraries\deceive\system_MIMXRT1064.h \
   ..\..\Libraries\nxp_libraries\deceive\MIMXRT1064_features.h \

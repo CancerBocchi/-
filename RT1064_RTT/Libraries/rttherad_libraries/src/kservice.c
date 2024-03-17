@@ -21,6 +21,9 @@
 
 #include <rtthread.h>
 #include <rthw.h>
+#include "stdio.h"
+#include "string.h"
+#include "stdint.h"
 
 #ifdef RT_USING_MODULE
 #include <dlmodule.h>

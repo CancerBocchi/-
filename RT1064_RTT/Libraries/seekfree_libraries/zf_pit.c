@@ -49,11 +49,11 @@ void pit_interrupt(PIT_enum pit_ch, uint32 count)
 {
     PIT_SetTimerPeriod(PIT, (pit_chnl_t)pit_ch, count);
     PIT_EnableInterrupts(PIT, (pit_chnl_t)pit_ch, kPIT_TimerInterruptEnable);//打开PIT通道0中断
-	PIT_SetTimerChainMode(PIT, (pit_chnl_t)pit_ch,false);
+		PIT_SetTimerChainMode(PIT, (pit_chnl_t)pit_ch,false);
     PIT_StartTimer(PIT, (pit_chnl_t)pit_ch);
     EnableIRQ(PIT_IRQn);
     
-    //NVIC_SetPriority(PIT_IRQn,0);//优先级设置 范围0-15 越小优先级越高
+    NVIC_SetPriority(PIT_IRQn,1);//优先级设置 范围0-15 越小优先级越高
     
 }
 
