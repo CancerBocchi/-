@@ -143,7 +143,7 @@ int $Sub$$main(void)
 {
     rtthread_startup();
     
-    $Super$$main();
+    //$Super$$main();
 		return 0;
 }
 #elif defined(__ICCARM__)

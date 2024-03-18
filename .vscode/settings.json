@@ -7,7 +7,13 @@
         "zf_iomuxc.h": "c",
         "seekfree_18tft.h": "c",
         "seekfree_printf.h": "c",
-        "debug_tool.h": "c"
+        "debug_tool.h": "c",
+        "fsl_qtmr.h": "c",
+        "common.h": "c",
+        "motor.h": "c",
+        "encoder.h": "c",
+        "zf_sdcard.h": "c",
+        "isr.h": "c"
     },
     "commentTranslate.source": "Bing"
 

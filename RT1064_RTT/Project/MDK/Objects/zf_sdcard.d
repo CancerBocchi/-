@@ -1,24 +1,23 @@
 ./objects/zf_sdcard.o: ..\..\Libraries\seekfree_libraries\zf_sdcard.c \
   ..\..\Libraries\nxp_libraries\utilities\debug_console\fsl_debug_console.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_common.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\assert.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\assert.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\string.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h \
   ..\..\Libraries\nxp_libraries\deceive\fsl_device_registers.h \
   ..\..\Libraries\nxp_libraries\deceive\MIMXRT1064.h \
   ..\..\Libraries\nxp_libraries\CMSIS\Include\core_cm7.h \
-  ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_version.h \
-  ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_compiler.h \
-  ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_armclang.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
-  ..\..\Libraries\nxp_libraries\CMSIS\Include\mpu_armv7.h \
+  C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Libraries\nxp_libraries\CMSIS\Include\cmsis_version.h \
+  C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Libraries\nxp_libraries\CMSIS\Include\cmsis_compiler.h \
+  C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Libraries\nxp_libraries\CMSIS\Include\cmsis_armclang.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h \
+  C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Libraries\nxp_libraries\CMSIS\Include\mpu_armv7.h \
   ..\..\Libraries\nxp_libraries\deceive\system_MIMXRT1064.h \
   ..\..\Libraries\nxp_libraries\deceive\MIMXRT1064_features.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_clock.h \
-  ..\..\Libraries\nxp_libraries\drives\fsl_common.h \
   ..\..\Libraries\nxp_libraries\components\serial_manager\serial_manager.h \
   ..\..\Libraries\nxp_libraries\components\serial_manager\serial_port_uart.h \
   ..\..\Libraries\nxp_libraries\components\uart\uart.h \
@@ -33,11 +32,9 @@
   ..\USER\inc\RT106X_config.h \
   ..\..\Libraries\seekfree_libraries\board\clock_config.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_gpio.h \
-  ..\..\Libraries\nxp_libraries\drives\fsl_clock.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_usdhc.h \
   ..\..\Libraries\nxp_libraries\middleware\sdmmc\inc\fsl_sdmmc_spec.h \
   ..\..\Libraries\seekfree_libraries\zf_iomuxc.h \
-  ..\..\Libraries\nxp_libraries\deceive\MIMXRT1064.h \
   ..\..\Libraries\seekfree_libraries\common\common.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\math.h \
   ..\..\Libraries\seekfree_libraries\zf_sdcard.h

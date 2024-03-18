@@ -20,6 +20,13 @@
 #ifndef _headfile_h
 #define _headfile_h
 
+// ------ 用户组头文件包含
+#include "myuart.h"
+#include "encoder.h"
+#include "motor.h"
+#include "vofa.h"
+#include "PID.h"
+#include "debug_tool.h"
 
 #include <stdint.h>
 #include "fsl_common.h"

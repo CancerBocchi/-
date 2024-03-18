@@ -1,0 +1,96 @@
+T36E0 000:150.520   SEGGER J-Link V7.92k Log File
+T36E0 000:150.653   DLL Compiled: Oct 18 2023 14:58:31
+T36E0 000:150.659   Logging started @ 2024-03-18 04:11
+T36E0 000:150.665   Process: C:\Keil_v5\UV4\UV4.exe
+T36E0 000:150.673 - 150.669ms
+T36E0 000:150.682 JLINK_SetWarnOutHandler(...)
+T36E0 000:150.687 - 0.006ms
+T36E0 000:150.693 JLINK_OpenEx(...)
+T36E0 000:152.070   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T36E0 000:152.371   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T36E0 000:152.514   Decompressing FW timestamp took 120 us
+T36E0 000:159.183   Hardware: V9.20
+T36E0 000:159.198   S/N: 4294967295
+T36E0 000:159.202   OEM: SEGGER
+T36E0 000:159.207   Feature(s): RDI, FlashBP, FlashBDL, FlashDL, JFlash, GDB
+T36E0 000:159.813   Bootloader: (Could not read)
+T36E0 000:160.593   TELNET listener socket opened on port 19021
+T36E0 000:160.699   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T36E0 000:160.788   WEBSRV Webserver running on local port 19080
+T36E0 000:160.858   Looking for J-Link GUI Server exe at: C:\Keil_v5\ARM\Segger\JLinkGUIServer.exe
+T36E0 000:160.912   Looking for J-Link GUI Server exe at: C:\Program Files\SEGGER\JLink\JLinkGUIServer.exe
+T36E0 000:160.934   Forking J-Link GUI Server: C:\Program Files\SEGGER\JLink\JLinkGUIServer.exe
+T36E0 000:163.668   J-Link GUI Server info: "J-Link GUI server V7.88m "
+T36E0 000:163.812 - 13.110ms returns "O.K."
+T36E0 000:163.825 JLINK_GetEmuCaps()
+T36E0 000:163.830 - 0.003ms returns 0xB9FF7BBF
+T36E0 000:163.838 JLINK_TIF_GetAvailable(...)
+T36E0 000:164.082 - 0.244ms
+T36E0 000:164.087 JLINK_SetErrorOutHandler(...)
+T36E0 000:164.090 - 0.003ms
+T36E0 000:164.108 JLINK_ExecCommand("ProjectFile = "C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Project\MDK\JLinkSettings.ini"", ...). 
+T36E0 000:171.544 - 7.436ms returns 0x00
+T36E0 000:171.563 JLINK_ExecCommand("Device = MIMXRT1064DVL6A", ...). 
+T36E0 000:171.994   Flash bank @ 0x60000000: SFL: Parsing sectorization info from ELF file
+T36E0 000:172.002     FlashDevice.SectorInfo[0]: .SectorSize = 0x00010000, .SectorStartAddr = 0x00000000
+T36E0 000:180.051   Device "MIMXRT1064XXX6A" selected.
+T36E0 000:180.263 - 8.696ms returns 0x00
+T36E0 000:180.272 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T36E0 000:180.277 - 0.000ms returns 0x01
+T36E0 000:180.281 JLINK_GetHardwareVersion()
+T36E0 000:180.285 - 0.003ms returns 92000
+T36E0 000:180.292 JLINK_GetDLLVersion()
+T36E0 000:180.295 - 0.003ms returns 79211
+T36E0 000:180.299 JLINK_GetOEMString(...)
+T36E0 000:180.303 JLINK_GetFirmwareString(...)
+T36E0 000:180.306 - 0.003ms
+T36E0 000:180.311 JLINK_GetDLLVersion()
+T36E0 000:180.314 - 0.002ms returns 79211
+T36E0 000:180.317 JLINK_GetCompileDateTime()
+T36E0 000:180.320 - 0.002ms
+T36E0 000:180.325 JLINK_GetFirmwareString(...)
+T36E0 000:180.328 - 0.002ms
+T36E0 000:180.331 JLINK_GetHardwareVersion()
+T36E0 000:180.334 - 0.002ms returns 92000
+T36E0 000:180.338 JLINK_GetSN()
+T36E0 000:180.342 - 0.003ms returns -1
+T36E0 000:180.346 JLINK_GetOEMString(...)
+T36E0 000:180.351 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T36E0 000:181.043 - 0.692ms returns 0x00
+T36E0 000:181.054 JLINK_HasError()
+T36E0 000:181.069 JLINK_SetSpeed(10000)
+T36E0 000:181.161 - 0.092ms
+T36E0 000:181.357 JLINK_HasError()
+T36E0 000:181.363 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T36E0 000:181.367 - 0.003ms returns JLINKARM_RESET_TYPE_NORMAL
+T36E0 000:181.371 JLINK_Reset()
+T36E0 000:181.578   InitTarget() start
+T36E0 000:181.583    J-Link Script File: Executing InitTarget()
+T36E0 000:283.188   InitTarget() end - Took 101ms
+T36E0 000:386.610   Failed to attach to CPU. Trying connect under reset.
+T36E0 001:186.360   InitTarget() start
+T36E0 001:186.455    J-Link Script File: Executing InitTarget()
+T36E0 001:291.762   InitTarget() end - Took 105ms
+T36E0 001:396.689 - 1215.317ms
+T36E0 001:396.717 JLINK_GetId()
+T36E0 001:396.933   InitTarget() start
+T36E0 001:396.960    J-Link Script File: Executing InitTarget()
+T36E0 001:501.820   InitTarget() end - Took 104ms
+T36E0 001:678.060   InitTarget() start
+T36E0 001:678.089    J-Link Script File: Executing InitTarget()
+T36E0 001:782.827   InitTarget() end - Took 104ms
+T36E0 001:894.789 - 498.071ms returns 0x00000000
+T36E0 001:894.853 JLINK_GetId()
+T36E0 001:895.042   InitTarget() start
+T36E0 001:895.051    J-Link Script File: Executing InitTarget()
+T36E0 001:999.740   InitTarget() end - Took 104ms
+T36E0 002:177.255   InitTarget() start
+T36E0 002:177.296    J-Link Script File: Executing InitTarget()
+T36E0 002:281.689   InitTarget() end - Took 104ms
+T36E0 002:385.326 - 490.471ms returns 0x00000000
+T36E0 002:390.399 JLINK_GetFirmwareString(...)
+T36E0 002:390.411 - 0.012ms
+T36E0 003:568.908 JLINK_Close()
+T36E0 003:583.416 - 14.507ms
+T36E0 003:583.430   
+T36E0 003:583.433   Closed

@@ -1,40 +1,40 @@
-./objects/encoder.o: ..\CODE\encoder.c ..\CODE\encoder.h \
-  ..\..\Libraries\seekfree_libraries\headfile.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+./objects/encoder.o: ..\CODE\src\encoder.c ..\CODE\inc\encoder.h \
+  ..\CODE\inc\headfile.h ..\CODE\inc\myuart.h \
+  ..\..\Libraries\seekfree_libraries\board\board.h \
+  ..\USER\inc\RT106X_config.h \
+  ..\..\Libraries\seekfree_libraries\board\clock_config.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_common.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\assert.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\assert.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\string.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h \
   ..\..\Libraries\nxp_libraries\deceive\fsl_device_registers.h \
   ..\..\Libraries\nxp_libraries\deceive\MIMXRT1064.h \
   ..\..\Libraries\nxp_libraries\CMSIS\Include\core_cm7.h \
-  ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_version.h \
-  ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_compiler.h \
-  ..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_armclang.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
-  ..\..\Libraries\nxp_libraries\CMSIS\Include\mpu_armv7.h \
+  C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Libraries\nxp_libraries\CMSIS\Include\cmsis_version.h \
+  C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Libraries\nxp_libraries\CMSIS\Include\cmsis_compiler.h \
+  C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Libraries\nxp_libraries\CMSIS\Include\cmsis_armclang.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h \
+  C:\Users\CANCER_CMP\Desktop\-\RT1064_RTT\Libraries\nxp_libraries\CMSIS\Include\mpu_armv7.h \
   ..\..\Libraries\nxp_libraries\deceive\system_MIMXRT1064.h \
   ..\..\Libraries\nxp_libraries\deceive\MIMXRT1064_features.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_clock.h \
-  ..\..\Libraries\nxp_libraries\drives\fsl_common.h \
+  ..\..\Libraries\nxp_libraries\drives\fsl_gpio.h \
+  ..\..\Libraries\seekfree_libraries\zf_uart.h \
+  ..\..\Libraries\seekfree_libraries\common\common.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\math.h \
+  ..\..\Libraries\nxp_libraries\drives\fsl_lpuart.h ..\CODE\inc\motor.h \
+  ..\CODE\inc\vofa.h ..\CODE\inc\PID.h \
   ..\..\Libraries\nxp_libraries\utilities\debug_console\fsl_debug_console.h \
   ..\..\Libraries\nxp_libraries\components\serial_manager\serial_manager.h \
   ..\..\Libraries\nxp_libraries\components\serial_manager\serial_port_uart.h \
   ..\..\Libraries\nxp_libraries\components\uart\uart.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_iomuxc.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_pit.h \
-  ..\..\Libraries\seekfree_libraries\board\board.h \
-  ..\USER\inc\RT106X_config.h \
-  ..\..\Libraries\seekfree_libraries\board\clock_config.h \
-  ..\..\Libraries\nxp_libraries\drives\fsl_gpio.h \
-  ..\..\Libraries\nxp_libraries\drives\fsl_clock.h \
   ..\..\Libraries\seekfree_libraries\board\pin_mux.h \
-  ..\..\Libraries\seekfree_libraries\board\clock_config.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_cache.h \
-  ..\..\Libraries\seekfree_libraries\common\common.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   ..\..\Libraries\seekfree_libraries\zf_vector.h \
   ..\..\Libraries\nxp_libraries\middleware\fatfs\source\ff.h \
   ..\..\Libraries\nxp_libraries\middleware\fatfs\source\ffconf.h \
@@ -46,15 +46,11 @@
   ..\..\Libraries\nxp_libraries\drives\fsl_usdhc.h \
   ..\..\Libraries\nxp_libraries\middleware\sdmmc\inc\fsl_sdmmc_spec.h \
   ..\..\Libraries\seekfree_libraries\common\SEEKFREE_PRINTF.h \
-  ..\..\Libraries\seekfree_libraries\common\common.h \
   ..\..\Libraries\seekfree_libraries\zf_gpio.h \
-  ..\..\Libraries\nxp_libraries\deceive\MIMXRT1064.h \
   ..\..\Libraries\seekfree_libraries\zf_iomuxc.h \
   ..\..\Libraries\seekfree_libraries\zf_pit.h \
   ..\..\Libraries\seekfree_libraries\zf_pwm.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_pwm.h \
-  ..\..\Libraries\seekfree_libraries\zf_uart.h \
-  ..\..\Libraries\nxp_libraries\drives\fsl_lpuart.h \
   ..\..\Libraries\seekfree_libraries\zf_spi.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_lpspi.h \
   ..\..\Libraries\seekfree_libraries\zf_systick.h \
@@ -64,7 +60,7 @@
   ..\..\Libraries\nxp_libraries\drives\fsl_adc.h \
   ..\..\Libraries\seekfree_libraries\zf_iic.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_lpi2c.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stddef.h \
   ..\..\Libraries\seekfree_libraries\zf_flash.h \
   ..\..\Libraries\seekfree_libraries\zf_camera.h \
   ..\..\Libraries\nxp_libraries\drives\fsl_flexio.h \
@@ -82,26 +78,25 @@
   ..\..\Libraries\rttherad_libraries\bsp\rtconfig.h \
   ..\..\Libraries\rttherad_libraries\include\rtdebug.h \
   ..\..\Libraries\rttherad_libraries\include\rtdef.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h \
   ..\..\Libraries\rttherad_libraries\include\rtlibc.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_stat.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\time.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\time.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_errno.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_fcntl.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_ioctl.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_dirent.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_signal.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\signal.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\signal.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_fdset.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_limits.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\limits.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\limits.h \
   ..\..\Libraries\rttherad_libraries\include\libc\libc_stdio.h \
   ..\..\Libraries\rttherad_libraries\include\rtservice.h \
   ..\..\Libraries\rttherad_libraries\include\rtm.h \
   ..\..\Libraries\rttherad_libraries\components\finsh\finsh_api.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_FONT.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_18TFT.h \
-  ..\..\Libraries\seekfree_peripheral\SEEKFREE_FONT.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_IPS114_SPI.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_IPS200_PARALLEL8.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_IIC.h \
@@ -114,11 +109,9 @@
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_L3G4200D.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_ICM20602.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_MT9V03X.h \
-  ..\..\Libraries\seekfree_libraries\zf_uart.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_WIRELESS.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_MT9V03X_CSI.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_W25QXXJV.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_SCC8660_CSI.h \
   ..\..\Libraries\seekfree_peripheral\SEEKFREE_SCC8660.h \
-  ..\..\Libraries\seekfree_peripheral\SEEKFREE_IMU963RA.h \
-  ..\CODE\filter.h ..\CODE\location.h ..\CODE\flash_param.h
+  ..\..\Libraries\seekfree_peripheral\SEEKFREE_IMU963RA.h

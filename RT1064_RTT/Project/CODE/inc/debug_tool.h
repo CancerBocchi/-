@@ -5,17 +5,15 @@
 #include "finsh.h"
 #include "shell.h"
 
-extern float a;
-
+//标记变量类型宏定义
 #define DEBUG_FLOAT 0
 #define DEBUG_INT 1
 
-#define DEBUG_VARNUM 2
 
-#define SETARG_HELP "you can use like this:\n\
-                    setarg show             ----- show the arg in the register \n\
-                    setarg <target> <value> ----- change the value of the target\n"
-
+/**
+ * @brief 调参命令相关变量
+ * 
+ */
 
 typedef struct argu_change
 {
@@ -24,9 +22,15 @@ typedef struct argu_change
     void* arg;
 
 }arg_change;
-
 extern arg_change arg_register[];
 
+
+
+
+/**
+ * @brief 所有工具初始化
+ * 
+ */
 void debug_tool_init();
 
 #endif

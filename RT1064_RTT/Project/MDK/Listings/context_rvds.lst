@@ -366,15 +366,14 @@ ARM Macro Assembler    Page 6
               E000ED20 
               FFFF0000 
               E000ED08 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M7.fp.dp --depen
-d=.\objects\context_rvds.d -o.\objects\context_rvds.o -I..\..\Libraries\rtthera
-d_libraries\libcpu\arm\cortex-m7 -I.\RTE\_nor_sdram_zf_dtcm_v6 -IC:\Keil_v5\ARM
-\PACK\NXP\MIMXRT1064_DFP\17.0.0\devices\MIMXRT1064 -IC:\Keil_v5\ARM\CMSIS\Inclu
-de -IC:\Keil_v5\ARM\PACK\NXP\MIMXRT1064_DFP\17.0.0 --predefine="__MICROLIB SETA
- 1" --predefine="__UVISION_VERSION SETA 527" --predefine="CPU_MIMXRT1064DVL6A S
-ETA 1" --predefine="__STARTUP_INITIALIZE_NONCACHEDATA SETA 1" --list=.\listings
-\context_rvds.lst ..\..\Libraries\rttherad_libraries\libcpu\arm\cortex-m7\conte
-xt_rvds.S
+Command Line: --debug --xref --diag_suppress=9931,A1950W --cpu=Cortex-M7.fp.dp 
+--depend=.\objects\context_rvds.d -o.\objects\context_rvds.o -I..\..\Libraries\
+rttherad_libraries\libcpu\arm\cortex-m7 -IC:\Keil_v5\ARM\PACK\NXP\MIMXRT1064_DF
+P\18.0.0\devices\MIMXRT1064 -IC:\Keil_v5\ARM\PACK\NXP\MIMXRT1064_DFP\18.0.0 --p
+redefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 539" --predefi
+ne="CPU_MIMXRT1064DVL6A SETA 1" --predefine="__STARTUP_INITIALIZE_NONCACHEDATA 
+SETA 1" --list=.\listings\context_rvds.lst ..\..\Libraries\rttherad_libraries\l
+ibcpu\arm\cortex-m7\context_rvds.S
 
 
 

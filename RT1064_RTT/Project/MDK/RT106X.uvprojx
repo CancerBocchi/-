@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>MIMXRT1064DVL6A</Device>
           <Vendor>NXP</Vendor>
-          <PackID>NXP.MIMXRT1064_DFP.17.0.0</PackID>
+          <PackID>NXP.MIMXRT1064_DFP.18.0.0</PackID>
           <PackURL>https://mcuxpresso.nxp.com/cmsis_pack/repo/</PackURL>
           <Cpu>IRAM(0x20000000,0x020000) IRAM2(0x00000000,0x020000) IROM(0x70000000,0x400000) XRAM(0x20200000,0x0c0000) CPUTYPE("Cortex-M7") FPU3(DFPU) CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -185,6 +185,8 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>3</RvdsVP>
             <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
+            <nBranchProt>0</nBranchProt>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -351,7 +353,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>__STARTUP_INITIALIZE_NONCACHEDATA</Define>
@@ -1833,6 +1835,56 @@
               <FileType>5</FileType>
               <FilePath>..\CODE\inc\debug_tool.h</FilePath>
             </File>
+            <File>
+              <FileName>encoder.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\encoder.h</FilePath>
+            </File>
+            <File>
+              <FileName>motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\motor.h</FilePath>
+            </File>
+            <File>
+              <FileName>myuart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\myuart.h</FilePath>
+            </File>
+            <File>
+              <FileName>PID.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\PID.h</FilePath>
+            </File>
+            <File>
+              <FileName>vofa.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\vofa.h</FilePath>
+            </File>
+            <File>
+              <FileName>encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\encoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>myuart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\myuart.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>vofa.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\vofa.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2236,13 +2288,14 @@
       <TargetName>nor_sdram_zf_dtcm_v6</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6110000::V6.11::.\ARMCLANG</pCCUsed>
+      <pArmCC>6210000::V6.21::ARMCLANG</pArmCC>
+      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>MIMXRT1064DVL6A</Device>
           <Vendor>NXP</Vendor>
-          <PackID>NXP.MIMXRT1064_DFP.17.0.0</PackID>
+          <PackID>NXP.MIMXRT1064_DFP.18.0.0</PackID>
           <PackURL>https://mcuxpresso.nxp.com/cmsis_pack/repo/</PackURL>
           <Cpu>IRAM(0x20000000,0x020000) IRAM2(0x00000000,0x020000) IROM(0x70000000,0x400000) XRAM(0x20200000,0x0c0000) CPUTYPE("Cortex-M7") FPU3(DFPU) CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -2411,6 +2464,8 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>3</RvdsVP>
             <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
+            <nBranchProt>0</nBranchProt>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -2577,7 +2632,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>__STARTUP_INITIALIZE_NONCACHEDATA</Define>
@@ -4058,6 +4113,56 @@
               <FileType>5</FileType>
               <FilePath>..\CODE\inc\debug_tool.h</FilePath>
             </File>
+            <File>
+              <FileName>encoder.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\encoder.h</FilePath>
+            </File>
+            <File>
+              <FileName>motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\motor.h</FilePath>
+            </File>
+            <File>
+              <FileName>myuart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\myuart.h</FilePath>
+            </File>
+            <File>
+              <FileName>PID.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\PID.h</FilePath>
+            </File>
+            <File>
+              <FileName>vofa.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CODE\inc\vofa.h</FilePath>
+            </File>
+            <File>
+              <FileName>encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\encoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>myuart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\myuart.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>vofa.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\src\vofa.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -4464,5 +4569,14 @@
     <components/>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>RT106X</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
